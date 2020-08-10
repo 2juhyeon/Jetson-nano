@@ -2,7 +2,7 @@
 
 
 namespace TIMER {
-    int create_timer(char* name, timer_t* timerID, TIMER_HANDLER(timer_handler) )
+    int create_timer(timer_t* timerID, MY_HANDLER_(VAR))
     {
         struct sigevent         te;
         struct sigaction        sa;
@@ -12,7 +12,7 @@ namespace TIMER {
         sa.sa_flags = SA_SIGINFO;
 
 
-        sa.sa_sigaction = timer_handler;
+        sa.sa_sigaction = VAR;
         sigemptyset(&sa.sa_mask);
 
         if (sigaction(sigNo, &sa, NULL) == -1)
@@ -31,14 +31,14 @@ namespace TIMER {
     }
 
 
-    int set_timer(timer_t* timerID, int Sec_Value, int Msec_Value) {
+    int set_timer(timer_t* timerID, int Sec_Value, int _100ns) {
         struct itimerspec       its;
 
         its.it_interval.tv_sec = Sec_Value;
-        its.it_interval.tv_nsec = Msec_Value * US2MS;
+        its.it_interval.tv_nsec = _100ns * US2100NS;
 
         its.it_value.tv_sec = Sec_Value;
-        its.it_value.tv_nsec =     Msec_Value * US2MS;
+        its.it_value.tv_nsec = _100ns * US2100NS;
 
         timer_settime(*timerID, 0, &its, NULL);
     }

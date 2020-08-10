@@ -2,17 +2,22 @@
 #include<iostream>
 
 
+
 //keyboard interrupt code
 int end_this_program;
-void signalHandler(int s) {
+void signalHandler(int sig) {
     //signal comare
-    if(s == SIGINT) end_this_program = true;
+    if(sig == SIGINT) end_this_program = true;
 }
+
+
 
 //make timer id
 timer_t firstTimerID;
 
-static void timer_handler(int sig, siginfo_t* si, void* uc)
+
+//if you change name of handler in that case change the name of create_timer's parameter;;
+MY_HANDLER_(timer_handler)
 {
     timer_t* tidp;
     tidp = (void**)(si->si_value).sival_ptr;
@@ -21,11 +26,14 @@ static void timer_handler(int sig, siginfo_t* si, void* uc)
     if (*tidp == firstTimerID) {
         /* write your code!*/
 
+
         std::cout << "1s" << std::endl;
+
 
     }
 
 }
+
 
 int main() {
     //make keyboard interrupt signal in linux -> crtl + c
@@ -34,15 +42,20 @@ int main() {
 
 
     // timer_handler is just one!
-    TIMER::create_timer("First Timer", &firstTimerID, timer_handler);
+    TIMER::create_timer(&firstTimerID, timer_handler);
 
     //set_timer consist of timerid, sec, us but Do not set less of 200us
     TIMER::set_timer(&firstTimerID, 1, 0);
 
     while (!end_this_program) {
         // write your code!!        
+
+
+
+
     }
 
     std::cout << "program end!" << std::endl;
     return 0;
 }
+
