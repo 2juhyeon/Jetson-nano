@@ -20,7 +20,7 @@ timer_t firstTimerID;
 MY_HANDLER_(timer_handler)
 {
     timer_t* tidp;
-    tidp = (void**)(si->si_value).sival_ptr;
+    tidp = Get_Timer_ID;
 
     //compare timerId
     if (*tidp == firstTimerID) {

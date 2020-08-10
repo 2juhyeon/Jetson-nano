@@ -5,7 +5,8 @@
 #include <signal.h>
 #include <iostream>
 
-#define MY_HANDLER_(VAR) void((VAR))(int sig, siginfo_t* si, void* uc)
+#define MY_HANDLER_(VAR) void((VAR))(int sig, siginfo_t* sig_info, void* uc)
+#define Get_Timer_ID ((void**)(sig_info->si_value).sival_ptr)
 #define US2100NS 100000 //10^5
  
 namespace TIMER {
