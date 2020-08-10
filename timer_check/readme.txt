@@ -3,7 +3,9 @@ Link with -lrt
 
 change your make file!
 1. make timer_handler
-   ex) void timer_handler(ing sig, siginfo_t* si, void* uc)
+   ex) MY_HANDLER_(VAR)
+       / ... /
+       create_timer(timerID, MY_HANDLER_(VAR));
 
 2. write distinguish code
    ex) timer_t* tidp;
@@ -16,3 +18,4 @@ change your make file!
     
         
 wating update!
+
