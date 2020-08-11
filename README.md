@@ -1,5 +1,5 @@
-# Jetson-nano
-jetson nano easy user guide
+# Linux
+linux easy user guide
 
 목차(Contents)
 
