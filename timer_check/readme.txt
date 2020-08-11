@@ -1,7 +1,7 @@
 namespace TIMER;
 Link with -lrt
+touch your make file!
 
-change your make file!
 1. make timer_handler
    ex) MY_HANDLER_(VAR)
        TIMER::create_timer(&firstTimerID, VAR);
