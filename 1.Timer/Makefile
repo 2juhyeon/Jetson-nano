@@ -7,7 +7,8 @@ LIB = -lrt
 $(TARGET): $(OBJS)
 	$(CC) -o $@ $(OBJS) $(LIB)
 
-	rm -f *.o
+	# rm -f *.o 
+	# remove .o files
 	
 main.o: main.cpp
 timer.o: timer.h timer.cpp
