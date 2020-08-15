@@ -1,7 +1,9 @@
 # Linux
     linux easy user guide
-      -windows환경에서의 JIT시스템을 이용할 수 있는 환경 구축
-
+      - windows환경에서의 JIT시스템을 이용할 수 있는 환경 구축
+      - timer의 핸들러 및 여러 함수(create, setting, delete)들을 편하게 사용하도록 만든 함수 제작
+      
+      
 windows 환경 구축 (visual studio 이용(visual studio community 2017 기준))
    - windows환경이 편리한 이유는 visual studio와 같은 좋은 ide가 있기 때문이다.
    - windows 환경에서 linux 코드 작성은 에디터 용도로 사용하지만 JIT(just in time)기능이 있기 때문에 디버깅이 편리해진다. 
@@ -17,6 +19,7 @@ windows 환경 구축 (visual studio 이용(visual studio community 2017 기준)
   
   3. 삼바 공유폴더에 옮겨 넣고 Makefile을 작성
     open ssh(telnet, putty ...)를 이용하여 리눅스 쉘에서 컴파일 실행
+
 
 # 목차(Contents)
 
