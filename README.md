@@ -1,7 +1,7 @@
 # Linux
     linux easy user guide
       - windows환경에서의 JIT시스템을 이용할 수 있는 환경 구축
-      - timer의 핸들러 및 여러 함수(create, setting, delete)들을 편하게 사용하도록 만든 함수 제작
+      
       
       
 windows 환경 구축 (visual studio 이용(visual studio community 2017 기준))
@@ -24,3 +24,4 @@ windows 환경 구축 (visual studio 이용(visual studio community 2017 기준)
 # 목차(Contents)
 
     1. 타이머(Timer)
+        - timer의 핸들러 및 여러 함수(create, setting, delete)들을 편하게 사용하도록 만든 함수 제작
