@@ -4,7 +4,7 @@
 
 windows 환경 구축 (visual studio 이용(visual studio community 2017 기준))
    - windows환경이 편리한 이유는 visual studio와 같은 좋은 ide가 있기 때문이다.
-   - 리눅스 환경에서는 에디터 용도로 사용하지만 JIT(just in time)기능이 있기 때문에 디버깅이 편리해진다. 
+   - windows 환경에서 linux 코드 작성은 에디터 용도로 사용하지만 JIT(just in time)기능이 있기 때문에 디버깅이 편리해진다. 
    - just in time 컴파일 (https://ko.wikipedia.org/wiki/JIT_%EC%BB%B4%ED%8C%8C%EC%9D%BC)
   
   1. 설치
