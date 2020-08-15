@@ -17,6 +17,6 @@ windows 환경 구축 (visual studio 이용(visual studio community 2017 기준)
   3. 삼바 공유폴더에 옮겨 넣고 Makefile을 작성
     ssh(putty etc..)를 이용하여 리눅스 쉘에서 컴파일 실행
 
-   #목차(Contents)
+# 목차(Contents)
 
     1. 타이머(Timer)
